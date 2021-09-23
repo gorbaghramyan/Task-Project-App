@@ -103,6 +103,13 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://davidgasparyan.github.io/messaging-board-epam/",
+            "name": "Messaging Board App"
+          }
         }
       }
     }
