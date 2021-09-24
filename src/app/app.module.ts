@@ -9,6 +9,9 @@ import { ListComponent } from './board/list/list.component';
 import { CardComponent } from './board/list/card/card.component';
 import { CardDetailComponent } from './board/list/card/card-detail/card-detail.component';
 
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +23,9 @@ import { CardDetailComponent } from './board/list/card/card-detail/card-detail.c
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    DragDropModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,4 @@
+import { Card } from './../../../models/card.component';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {
