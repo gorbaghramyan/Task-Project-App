@@ -1,9 +1,9 @@
-import { List } from './../../models/list.component';
-import { Card } from './../../models/card.component';
-import { ICard } from './../../interfaces/card.interface';
-import { IList } from './../../interfaces/list.interface';
+import { Card } from './../../utilities/classes/card.class';
+import { ICard } from './../../utilities/interfaces/card.interface';
+import { List } from '../../utilities/classes/list.class';
+import { IList } from './../../utilities/interfaces/list.interface';
 import { Component, Input, OnInit } from '@angular/core';
-import { DragNDrop } from 'src/app/abstracts/dragndrop.abstract';
+import { DragNDrop } from 'src/app/utilities/abstracts/dragndrop.abstract.class';
 
 @Component({
   selector: 'app-list',

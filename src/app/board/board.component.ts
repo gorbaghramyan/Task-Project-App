@@ -1,7 +1,7 @@
-import { IList } from './../interfaces/list.interface';
-import { IBoard } from './../interfaces/board.interface';
-import { List } from './../models/list.component';
-import { Card } from './../models/card.component';
+import { Card } from './../utilities/classes/card.class';
+import { List } from '../utilities/classes/list.class';
+import { IList } from './../utilities/interfaces/list.interface';
+import { IBoard } from '../utilities/interfaces/board.interface';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

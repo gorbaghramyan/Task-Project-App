@@ -1,4 +1,4 @@
-import { Card } from '../models/card.component';
+import { Card } from '../classes/card.class';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
 export abstract class DragNDrop {
