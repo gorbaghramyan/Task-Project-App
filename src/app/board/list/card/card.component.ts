@@ -1,14 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { CardActionsService } from 'src/app/services/cardActions.service';
+import { Card } from 'src/app/utilities/classes/card.class';
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+  styleUrls: ['./card.component.css'],
 })
 export class CardComponent implements OnInit {
-  constructor() { }
+  constructor(private cardService: CardActionsService) { }
+  @Input() card: Card = {} as Card;
+  ngOnInit(): void {    
+  };
 
-  ngOnInit(): void {
-  }
+  onCardDelete() {
+    console.log(this.card.index);
+    this.cardService.cardDelete(this.card.index)
+  };
 
 }

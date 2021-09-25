@@ -1,13 +1,10 @@
 <div class="list-wrap">
     <div cdkDropList [cdkDropListData]="cards" class="list" (cdkDropListDropped)="drop($event)">
         <p class="list-name">{{name}}</p>
-        <div class="card" *ngFor="let item of cards; let i = index " cdkDrag>
-            <p>{{item.subject}}</p>
-            <button (click)="deleteCard(i)">X</button>
-        </div>
+        <app-card class="appCard" *ngFor="let item of cards; let i = index" [card]="item" cdkDrag></app-card>
     </div>
     <div class="cardGenerator">
         <input placeholder="Subject.." type="text" [(ngModel)]="newCardName" />
-        <button (click)="createCard()">Add</button>
+        <button (click)="onCardCreate()">Add</button>
     </div>
 </div>

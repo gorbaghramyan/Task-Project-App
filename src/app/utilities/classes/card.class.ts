@@ -1,13 +1,9 @@
 import { ICard } from '../interfaces/card.interface';
 
 export class Card implements ICard {
-    subject: string;
-    description: string;
-    comments: string[];
-
-    constructor(subject: string, description: string, comments: string[]) {
-        this.subject = subject;
-        this.description = description;
-        this.comments = comments;
-    }
+    constructor(
+        public subject:string, 
+        public description:string,
+        public comments:string [],
+        public index:number) { }
 }
