@@ -11,6 +11,7 @@ import { CardDetailComponent } from './board/list/card/card-detail/card-detail.c
 
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BoardComponent,
     ListComponent,
     CardComponent,
-    CardDetailComponent
+    CardDetailComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

@@ -12,19 +12,20 @@ import { DragNDrop } from 'src/app/utilities/abstracts/dragndrop.abstract.class'
 })
 export class ListComponent extends DragNDrop implements IList, OnInit, List {
   @Input() cards: ICard[] = [] as ICard[];
-  name: string = '';
+  @Input() name: string = '';
+  newCardName: string = '';
 
   constructor() {
-    super()
+    super();
   }
 
   ngOnInit(): void {
   }
 
   createCard() {
-    if (this.name) {
-      this.cards.push(new Card(this.name, 'Desc', []));
-      this.name = '';
+    if (this.newCardName) {
+      this.cards.push(new Card(this.newCardName, 'Desc', []));
+      this.newCardName = '';
     }
   }
 

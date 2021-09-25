@@ -1,10 +1,9 @@
-<div cdkDropListGroup>
-    <div class="example-container" *ngFor="let list of lists">
-        <h1>{{list.name}}</h1>
-        <app-list [cards]="list.cards"></app-list>
+<div class="board">
+    <div class="list-container" cdkDropListGroup>
+        <app-list [cards]="list.cards" [name]="list.name" *ngFor="let list of lists"></app-list>
     </div>
-</div>
-<div>
-    <input type="text" #newListInput />
-    <button (click)="addList(newListInput.value); newListInput.value = ''">Add list</button>
+    <div class="newList">
+        <input type="text" #newListInput />
+        <button (click)="addList(newListInput.value); newListInput.value = ''">Add list</button>
+    </div>
 </div>

@@ -26,5 +26,4 @@ export class BoardComponent implements OnInit, IBoard {
       this.lists.push(new List(name, []));
     }
   }
-
 }
