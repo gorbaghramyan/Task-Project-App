@@ -23,7 +23,7 @@ export class ListComponent extends DragNDrop implements IList, OnInit, List {
 
   ngOnInit(): void {
     this.cards = this.cardService.cardData;
-    this.cardService.cardDeletionEvent.subscribe((data)=>{
+    this.cardService.cardDeletionSubject.subscribe((data:any)=>{
       this.cards = data
     })
   };

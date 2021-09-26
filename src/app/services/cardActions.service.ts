@@ -1,11 +1,12 @@
-import { Injectable, Output, EventEmitter } from '@angular/core';
+import { Injectable} from '@angular/core';
+import { Subject } from 'rxjs';
 
 import { Card } from '../utilities/classes/card.class';
 
 @Injectable()
 export class CardActionsService {
 
-  @Output() cardDeletionEvent: EventEmitter<Card[]> = new EventEmitter<Card[]>();
+  cardDeletionSubject = new Subject();
 
   cards: Card[] = [new Card('To do first card', 'Desc', [], Date.now())];
 
@@ -22,7 +23,7 @@ export class CardActionsService {
     this.cards = this.cards.filter((card) => {
       return index !== card.index
     });
-    this.cardDeletionEvent.emit(this.cards)
+    this.cardDeletionSubject.next(this.cards)
   };
 
   get cardData () {
