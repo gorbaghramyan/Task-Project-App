@@ -10,11 +10,10 @@ import { Card } from 'src/app/utilities/classes/card.class';
 export class CardComponent implements OnInit {
   constructor(private cardService: CardActionsService) { }
   @Input() card: Card = {} as Card;
-  ngOnInit(): void {    
+  ngOnInit(): void {
   };
 
   onCardDelete() {
-    console.log(this.card.index);
     this.cardService.cardDelete(this.card.index)
   };
 

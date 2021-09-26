@@ -19,8 +19,8 @@ export class CardActionsService {
   };
 
   cardDelete (index: number) {
-    this.cards = this.cards.filter((cardItem, cardIndex) => {
-      return index === cardIndex
+    this.cards = this.cards.filter((card) => {
+      return index !== card.index
     });
     this.cardDeletionEvent.emit(this.cards)
   };
