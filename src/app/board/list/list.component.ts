@@ -28,12 +28,8 @@ export class ListComponent extends DragNDrop implements IList, OnInit, List {
     })
   };
 
-  onCardCreate() {    
-    this.cardService.cardCreate(this.newCardName)
+  onCardCreate() {
+    this.cardService.cardCreate(this.newCardName);
+    this.newCardName = '';
   };
-
-
-  
-
-
 }
